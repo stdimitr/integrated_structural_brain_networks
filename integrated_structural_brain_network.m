@@ -1,11 +1,14 @@
-function isbn=integrated_structural_brain_network(diffusion_sbn)
+function [isbn CIJtree coef]=integrated_structural_brain_network(diffusion_sbn)
 
 %% An Graph-based Integration of different Diffusion Metrics 
 %% Into a Single Structural Brain Network
 %%% INPUT : a 3D matrix with dimensions equal to = number of diffusion
 %%%         metrics x rois x rois
-%%%OUTPUT : isbn = The integrated structural brain network with dimension
+%%%OUTPUT : isbn = The integrated weighted structural brain network with dimension
 %%%                 equals to 90 x 90
+%%%        CIJtree = The topological filtered with OMST method integrated structural brain network with dimension
+%%%                 equals to 90 x 90
+%%%            coef = coefficients of contribution of every diffusion-metric based structural brain network to the integrated weighted structural brain network
 
 %%% For further details see the paper:
 %% Paper: Dimitriadis et al., 2017.Improving the Reliability of Network Metrics in Structural Brain Networks by Integrating Different Network Weighting Strategies into a Single Graph. Front. Neurosci., 
