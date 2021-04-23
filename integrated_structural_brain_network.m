@@ -54,10 +54,10 @@ for k=1:no_dmetrics
 end
 
 %% normalize the integrated brain network
-isbn=isbn./max(isbn);
+isbn_norm=isbn/max(isbn);
 
 %% topological filtering of integrated brain network with OMST
- [nCIJtree CIJtree mdeg  globalcosteffmax costmax E]=threshold_omst_gce_wu(isbn,1);
+ [nCIJtree CIJtree mdeg  globalcosteffmax costmax E]=threshold_omst_gce_wu(isbn_norm,1);
  
  %% PLOT THE COEFFICIENTS THAT DEMONSTRATE THE CONTRIBUTION OF EACH DIFFUSION-BASED
  %% STRUCTURAL BRAIN NETWORK TO THE INTEGRATED SBN
